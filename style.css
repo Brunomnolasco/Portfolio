@@ -320,6 +320,7 @@ header p
 .projts img
 {
     width: 100%;
+    transition: all 1s;
 }
 
 .projts::before
@@ -334,11 +335,17 @@ header p
     bottom: 0px;
     left: 0px;
     transition: all .5s;
+    z-index: 1;
 }
 
 .projts:hover::before
 {
     height: 100%;
+}
+
+.projts:hover img
+{
+    transform: scale(1.1);
 }
 
 .projts a
@@ -355,8 +362,8 @@ header p
     border-radius: 10px;
     margin: 10px;
     align-items: center;
-    transition: all 1s;
     display: none;
+    z-index: 2;
 }
 .projts:hover a
 {
